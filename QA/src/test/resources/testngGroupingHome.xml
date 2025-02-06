@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite">
+    <test name="First Group">
+        <groups>
+            <run>
+                <include name = "first"/>
+            </run>
+        </groups>
+        <classes>
+            <class name = "groupping.Groups" />
+        </classes>>
+    </test>
+    <test name = "Second Group">
+        <groups>
+            <run>
+                <include name = "second"/>
+            </run>
+        </groups>
+        <classes>
+            <class name = "groupping.Groups" />
+        </classes>>
+    </test>
+</suite>

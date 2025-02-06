@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="classes" thread-count="2">
+    <test name="Test1">
+        <parameters>
+            <parameter name = "email" value = "data@mail.com"/>
+            <parameter name = "password" value = "12345678"/>
+        </parameters>>
+        <classes>
+            <class name = "Paremeters.LoginThreeUsersParameters" />
+        </classes>>
+    </test>
+    <test name="Test2">
+        <parameters>
+            <parameter name = "email" value = "data2@mail.com"/>
+            <parameter name = "password" value = "12345678"/>
+        </parameters>>
+        <classes>
+            <class name = "Paremeters.LoginThreeUsersParameters" />
+        </classes>>
+    </test>
+    <test name="Test3">
+        <parameters>
+            <parameter name = "email" value = "data3@mail.com"/>
+            <parameter name = "password" value = "12345678"/>
+        </parameters>>
+        <classes>
+            <class name = "Paremeters.LoginThreeUsersParameters" />
+        </classes>>
+    </test>
+</suite>
