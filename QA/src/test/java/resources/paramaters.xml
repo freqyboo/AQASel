@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite">
+    <test name="TC_106">
+        <parameters>
+            <parameter name = "email" value = "data@mail.com"/>
+            <parameter name = "password" value = "12345678"/>
+        </parameters>>
+        <classes>
+            <class name = "org.example.Task2" />
+        </classes>>
+    </test>
+    <test name="TC_107">
+        <parameters>
+            <parameter name = "email" value = "data@mail.com"/>
+            <parameter name = "password" value = ""/>
+        </parameters>>
+        <classes>
+            <class name = "org.example.Task2" />
+        </classes>>
+    </test>
+    <test name="TC_108">
+        <parameters>
+            <parameter name = "email" value = ""/>
+            <parameter name = "password" value = "12345678"/>
+        </parameters>>
+        <classes>
+            <class name = "org.example.Task2" />
+        </classes>>
+    </test>
+    <test name="TC_109">
+        <parameters>
+            <parameter name = "email" value = ""/>
+            <parameter name = "password" value = ""/>
+        </parameters>>
+        <classes>
+            <class name = "org.example.Task2" />
+        </classes>>
+    </test>
+    <test name="TC_110">
+        <parameters>
+            <parameter name = "email" value = "data@@mail.com"/>
+            <parameter name = "password" value = "12345678"/>
+        </parameters>>
+        <classes>
+            <class name = "org.example.Task2" />
+        </classes>>
+    </test>
+    <test name="TC_111">
+        <parameters>
+            <parameter name = "email" value = "data@@mail.com"/>
+            <parameter name = "password" value = "123456789"/>
+        </parameters>>
+        <classes>
+            <class name = "org.example.Task2" />
+        </classes>>
+    </test>
+    <test name="TC_112">
+        <parameters>
+            <parameter name = "email" value = "example@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"/>
+            <parameter name = "password" value = "123456789"/>
+        </parameters>>
+        <classes>
+            <class name = "org.example.Task2" />
+        </classes>>
+    </test>
+    <test name="TC_113">
+        <parameters>
+            <parameter name = "email" value = "' OR 1=1 -- -"/>
+            <parameter name = "password" value = "123456789"/>
+        </parameters>>
+        <classes>
+            <class name = "org.example.Task2" />
+        </classes>>
+    </test>
+    <test name="TC_114">
+        <parameters>
+            <parameter name = "email" value = "data@mail.com"/>
+            <parameter name = "password" value = "111111111111111111111"/>
+        </parameters>>
+        <classes>
+            <class name = "org.example.Task2" />
+        </classes>>
+    </test>
+    <test name="TC_115">
+        <parameters>
+            <parameter name = "email" value = "data@mail.com"/>
+            <parameter name = "password" value = "1234567"/>
+        </parameters>>
+        <classes>
+            <class name = "org.example.Task2" />
+        </classes>>
+    </test>
+</suite>
