@@ -20,7 +20,7 @@ public class Task2 {
 
     @BeforeTest
     public void setup() {
-        driver = DriverSetup.driverInit();
+        driver = DriverSetup.startDriver();
         driver.manage().window().maximize();
         driver.get("https://qa-course-01.andersenlab.com/login");
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));

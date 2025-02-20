@@ -52,6 +52,7 @@ public class DragAndDropPage {
     public WebElement getTextBox() {
         return textBox;
     }
+
     public By getTextBoxXpath() {
         return By.xpath("/html/body/div[1]/div/div[2]/div/main/section/div");
     }

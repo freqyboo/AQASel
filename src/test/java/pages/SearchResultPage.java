@@ -26,6 +26,4 @@ public class SearchResultPage {
         return searchResultText;
     }
 
-
-
 }

@@ -6,18 +6,17 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.*;
 import util.driver.DriverSetup;
+import util.listeners.AllureListener;
 
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Objects;
 
+@Listeners({AllureListener.class})
 public class Task1 {
 
     private WebDriver driver;
@@ -46,7 +45,7 @@ public class Task1 {
 
     @BeforeTest
     public void setup() {
-        driver = DriverSetup.driverInit();
+        driver = DriverSetup.startDriver();
         driver.manage().window().maximize();
         driver.get("https://qa-course-01.andersenlab.com/login");
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -61,7 +60,7 @@ public class Task1 {
 
     @BeforeMethod
     public void checkIfMain() {
-        if(!Objects.equals(driver.getCurrentUrl(), "https://qa-course-01.andersenlab.com/") && !Objects.equals(driver.getCurrentUrl(), "https://qa-course-01.andersenlab.com/actions")) {
+        if (!Objects.equals(driver.getCurrentUrl(), "https://qa-course-01.andersenlab.com/") && !Objects.equals(driver.getCurrentUrl(), "https://qa-course-01.andersenlab.com/actions")) {
             driver.get("https://qa-course-01.andersenlab.com");
             login();
         }
@@ -96,8 +95,26 @@ public class Task1 {
         Assert.assertEquals(dndPage.getTextBox().getText(), finishMessage);
         dndPage.clickFinishButton();
     }
+
     @Test
-    public void test3() {
+    public void test3() { //failing test
+        mainPage.hoverOverCourse().clickSelect();
+        SelectCoursePage sPage = new SelectCoursePage(driver);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(sPage.getSelectCountry()));
+        sPage.setCountry("USA")
+                .setLang("English")
+                .setType("TestNG")
+                .setFirstDate("17-02-2025")
+                .setSecondDate("03-03-2025")
+                .setMulti(new ArrayList<>(Arrays.asList("AQA Java", "AQA Python")))
+                .clickButton();
+        SearchResultPage search = new SearchResultPage(driver);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(search.getSearchResultHeadXpath()));
+        Assert.assertEquals(search.getSearchResultText().getText(), searchMessage);
+    }
+
+    @Test
+    public void test4() {
         mainPage.hoverOverCourse().clickAlerts();
 
         apObject = new ActionsPage(driver);
@@ -109,7 +126,7 @@ public class Task1 {
     }
 
     @Test
-    public void test4() {
+    public void test5() {
         apObject.triggerAlert2();
         wait.until(ExpectedConditions.alertIsPresent());
         Assert.assertEquals(apObject.getAlertText(), expectedAlert2);
@@ -118,7 +135,7 @@ public class Task1 {
     }
 
     @Test
-    public void test5() {
+    public void test6() {
         apObject.triggerAlert3();
         wait.until(ExpectedConditions.alertIsPresent());
         Assert.assertEquals(apObject.getAlertText(), expectedAlert3);
@@ -126,5 +143,7 @@ public class Task1 {
                 .acceptAlert();
         Assert.assertTrue(apObject.getResultsText().contains("Test"));
     }
+
+
 
 }
