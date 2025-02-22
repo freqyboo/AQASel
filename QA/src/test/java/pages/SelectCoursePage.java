@@ -83,4 +83,5 @@ public class SelectCoursePage {
     public By getSelectCountry() {
         return By.xpath("//select[@data-lol='SelectCountry']");
     }
+
 }

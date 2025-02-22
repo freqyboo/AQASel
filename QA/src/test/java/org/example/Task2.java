@@ -15,7 +15,6 @@ import java.time.Duration;
 public class Task2 {
 
     private WebDriver driver;
-
     private WebDriverWait wait;
 
     @BeforeTest

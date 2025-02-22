@@ -21,15 +21,25 @@ import java.util.Objects;
 public class Task1 {
 
     private WebDriver driver;
+
     private Actions action;
+
     private WebDriverWait wait;
+
     private ActionsPage apObject;
+
     private String searchMessage = "Unfortunately, we did not find any courses matching your chosen criteria.";
+
     private String finishMessage = "Congratulations! Let's test for the best!";
+
     private final String expectedAlert1 = "You have called alert!";
+
     private final String expectedAlert2 = "Are you sure you want to apply the discount?";
+
     private final String expectedAlert3 = "Here you may describe a reason why you are cancelling your registration (or leave this field empty).";
+
     private final String expectedResult1 = "Congratulations, you have successfully enrolled in the course!";
+
     private final String expectedResult2 = "You received a 10% discount on the second course.";
 
     private MainPage mainPage;

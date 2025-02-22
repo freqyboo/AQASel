@@ -10,7 +10,6 @@ import org.testng.reporters.jq.Main;
 public class MainPage {
 
     private WebDriver driver;
-
     private Actions action;
 
     @FindBy(xpath = "//div[contains(text(), 'AQA Practice')]")
