@@ -10,7 +10,6 @@ import org.openqa.selenium.support.PageFactory;
 public class DragAndDropPage {
 
     private WebDriver driver;
-
     private Actions action;
 
     @FindBy(xpath = "//span[@id='manual1']")

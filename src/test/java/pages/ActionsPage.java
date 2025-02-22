@@ -9,7 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 public class ActionsPage {
 
     private WebDriver driver;
-
     private Actions action;
 
     @FindBy(xpath = "//iframe[@title='Finish your registration']")
